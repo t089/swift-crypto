@@ -1,3 +1,5 @@
+import XCTest
+
 //===----------------------------------------------------------------------===//
 //
 // This source file is part of the SwiftCrypto open source project
@@ -16,7 +18,6 @@ import FoundationEssentials
 #else
 import Foundation
 #endif
-import XCTest
 
 #if CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
 // Skip tests that require @testable imports of CryptoKit.
