@@ -17,7 +17,11 @@
 @_implementationOnly import CCryptoBoringSSLShims
 import Crypto
 import CryptoBoringWrapper
+#if canImport(FoundationEssentials)
+import FoundationEssentials
+#else
 import Foundation
+#endif
 
 internal struct BoringSSLRSAPublicKey: Sendable {
     private var backing: Backing

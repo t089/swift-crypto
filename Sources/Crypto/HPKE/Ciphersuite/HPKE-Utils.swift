@@ -14,7 +14,11 @@
 #if CRYPTO_IN_SWIFTPM && !CRYPTO_IN_SWIFTPM_FORCE_BUILD_API
 @_exported import CryptoKit
 #else
+#if canImport(FoundationEssentials)
+import FoundationEssentials
+#else
 import Foundation
+#endif
 
 internal func I2OSP(value: Int, outputByteCount: Int) -> Data {
     precondition(outputByteCount > 0, "Cannot I2OSP with no output length.")

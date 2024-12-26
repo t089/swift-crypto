@@ -11,7 +11,11 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 //===----------------------------------------------------------------------===//
+#if canImport(FoundationEssentials)
+import FoundationEssentials
+#else
 import Foundation
+#endif
 
 func I2OSP(value: Int, outputByteCount: Int) -> Data {
     precondition(outputByteCount > 0, "Cannot I2OSP with no output length.")
